@@ -17,7 +17,7 @@ export async function dbConnect() {
 
     if (!cached.promise) {
        
-       mongoose.connect(MONGODB_URI )
+       mongoose.connect(process.env.MONGODB_URI!)
        .then(()=>mongoose.connection)
     }
     try {
